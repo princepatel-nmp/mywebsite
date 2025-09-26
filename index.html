@@ -1,13 +1,182 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Simple HTML Page</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Resume — Your Name</title>
+  <style>
+    :root{
+      --accent:#0b74de;
+      --muted:#6b7280;
+      --bg:#f7fafc;
+      --card:#ffffff;
+      --max-width:900px;
+      --gap:20px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#111827;display:flex;align-items:center;justify-content:center;padding:32px}
+    .resume{width:100%;max-width:var(--max-width);background:var(--card);box-shadow:0 8px 30px rgba(12,15,20,0.08);border-radius:12px;overflow:hidden;display:grid;grid-template-columns:1fr 2fr}
+
+    /* Sidebar */
+    .sidebar{background:linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);padding:28px 22px;border-right:1px solid #eef2f7}
+    .photo{width:110px;height:110px;border-radius:12px;overflow:hidden;background:#e6eefb;margin:0 auto 14px;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)}
+    h1{font-size:20px;margin:8px 0 0;text-align:center}
+    .title{font-size:13px;text-align:center;color:var(--muted);margin-top:6px}
+    .contact{margin-top:18px;font-size:14px}
+    .contact p{margin:8px 0;color:var(--muted);font-size:13px}
+    .section-title{display:flex;align-items:center;gap:8px;margin-top:18px;font-weight:700;color:var(--accent);font-size:13px}
+    .skill-list{margin-top:10px;display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:#f1f5f9;padding:6px 10px;border-radius:999px;font-size:12px;color:#0f172a}
+
+    /* Main content */
+    .main{padding:28px}
+    .headline{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .headline h2{margin:0;font-size:18px}
+    .summary{margin-top:12px;color:var(--muted);line-height:1.45}
+
+    .job{margin-top:16px}
+    .job h3{margin:0;font-size:15px}
+    .job .meta{color:var(--muted);font-size:13px;margin-top:4px}
+    .job p{margin:8px 0;color:#111827}
+    .bullets{margin:8px 0 0;padding-left:18px}
+    .bullets li{margin:6px 0}
+
+    .education{margin-top:14px}
+
+    .print-btn{border:0;background:var(--accent);color:white;padding:8px 14px;border-radius:8px;font-weight:600;cursor:pointer}
+
+    footer{padding:16px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .resume{grid-template-columns:1fr}
+      .sidebar{border-right:none;border-bottom:1px solid #eef2f7}
+    }
+
+    /* Print styles */
+    @media print{
+      body{background:white}
+      .resume{box-shadow:none;border-radius:0;max-width:100%}
+      .print-hide{display:none}
+      .resume{grid-template-columns:1fr 2fr}
+    }
+  </style>
 </head>
 <body>
-    <h1>Welcome to My Page</h1>
-    <p>This is a simple paragraph of text.</p>
-    <p>You can add more content here, like images or links.</p>
+  <div class="resume" role="document">
+    <aside class="sidebar">
+      <div class="photo" aria-hidden="true">YR</div>
+      <h1>Your Name</h1>
+      <div class="title">Software Engineer — Full Stack</div>
+
+      <div class="contact">
+        <p><strong>Email:</strong> your.email@example.com</p>
+        <p><strong>Phone:</strong> +91 98765 43210</p>
+        <p><strong>Location:</strong> Mumbai, India</p>
+        <p><strong>Website:</strong> yoursite.example</p>
+      </div>
+
+      <div class="section-title">Skills</div>
+      <div class="skill-list" aria-label="skills">
+        <div class="skill">JavaScript</div>
+        <div class="skill">Node.js</div>
+        <div class="skill">React</div>
+        <div class="skill">TypeScript</div>
+        <div class="skill">gRPC</div>
+        <div class="skill">Docker</div>
+        <div class="skill">Kubernetes</div>
+      </div>
+
+      <div class="section-title">Languages</div>
+      <div style="margin-top:10px;color:var(--muted);font-size:13px">
+        English — Professional<br>
+        Hindi — Native
+      </div>
+
+      <div class="section-title">Education</div>
+      <div style="margin-top:8px;color:var(--muted);font-size:13px">
+        B.Tech in Computer Science<br>
+        Institute Name — 2018
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="headline">
+        <div>
+          <h2>Senior Software Engineer</h2>
+          <div style="color:var(--muted);font-size:13px">Experienced in building scalable microservices, CI/CD, and modern web apps.</div>
+        </div>
+        <div class="print-hide">
+          <button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
+        </div>
+      </div>
+
+      <div class="summary">
+        Concise 2–3 line professional summary. Focus on achievements and impact: what you build, the scale (users/traffic), tech stack, and strengths.
+      </div>
+
+      <section class="experience">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:18px">
+          <h3 style="margin:0">Experience</h3>
+          <div style="color:var(--muted);font-size:13px">Total: 4+ years</div>
+        </div>
+
+        <article class="job">
+          <h3>Senior Software Engineer — Acme Corp</h3>
+          <div class="meta">Jun 2023 — Present · Mumbai, India</div>
+          <p class="muted">Working on real-time systems and backend APIs serving millions of requests/month.</p>
+          <ul class="bullets">
+            <li>Designed and implemented microservices with Node.js and gRPC, reducing latency by 30%.</li>
+            <li>Led migration to Kubernetes and introduced Canary deployments using Argo Rollouts.</li>
+            <li>Built observability stack with Prometheus, Grafana and OpenTelemetry.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <h3>Software Engineer — Beta Labs</h3>
+          <div class="meta">Jul 2020 — May 2023 · Remote</div>
+          <p>Worked on frontend and backend features for an analytics product.</p>
+          <ul class="bullets">
+            <li>Implemented a React component library and improved bundle size by 18%.</li>
+            <li>Wrote unit and integration tests, increasing coverage from 45% to 78%.</li>
+          </ul>
+        </article>
+
+      </section>
+
+      <section class="education">
+        <h3 style="margin-top:22px">Education</h3>
+        <div style="margin-top:8px">
+          <strong>Bachelor of Technology in Computer Science</strong>
+          <div class="meta">National Institute — 2014 — 2018</div>
+          <p style="color:var(--muted);margin-top:6px">Relevant coursework: Data Structures, OS, Distributed Systems, Databases.</p>
+        </div>
+      </section>
+
+      <section class="projects" style="margin-top:22px">
+        <h3>Projects</h3>
+        <div style="margin-top:8px">
+          <strong>Live Docs — Documentation platform</strong>
+          <div class="meta">React • Next.js • Docker • AWS</div>
+          <p style="margin-top:6px;color:var(--muted);">Short one-line description emphasizing impact, link to demo or repo.</p>
+        </div>
+      </section>
+
+      <section style="margin-top:22px">
+        <h3>Certifications & Awards</h3>
+        <ul style="margin-top:8px;color:var(--muted);padding-left:18px">
+          <li>Certified Kubernetes Application Developer</li>
+          <li>Employee of the Year — Acme Corp (2024)</li>
+        </ul>
+      </section>
+
+    </main>
+  </div>
+
+  <footer>
+    Tip: Edit the file and replace placeholder text. Use the Print button to save as PDF for job applications.
+  </footer>
+
 </body>
 </html>

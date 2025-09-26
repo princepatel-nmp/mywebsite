@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Resume — Your Name</title>
+  <title>Resume — Prince Patel</title>
   <style>
     :root{
       --accent:#0b74de;
@@ -31,20 +31,10 @@
 
     /* Main content */
     .main{padding:28px}
-    .headline{display:flex;align-items:center;justify-content:space-between;gap:12px}
     .headline h2{margin:0;font-size:18px}
     .summary{margin-top:12px;color:var(--muted);line-height:1.45}
 
-    .job{margin-top:16px}
-    .job h3{margin:0;font-size:15px}
-    .job .meta{color:var(--muted);font-size:13px;margin-top:4px}
-    .job p{margin:8px 0;color:#111827}
-    .bullets{margin:8px 0 0;padding-left:18px}
-    .bullets li{margin:6px 0}
-
     .education{margin-top:14px}
-
-    .print-btn{border:0;background:var(--accent);color:white;padding:8px 14px;border-radius:8px;font-weight:600;cursor:pointer}
 
     footer{padding:16px;text-align:center;color:var(--muted);font-size:13px}
 
@@ -54,7 +44,6 @@
       .sidebar{border-right:none;border-bottom:1px solid #eef2f7}
     }
 
-    /* Print styles */
     @media print{
       body{background:white}
       .resume{box-shadow:none;border-radius:0;max-width:100%}
@@ -66,117 +55,51 @@
 <body>
   <div class="resume" role="document">
     <aside class="sidebar">
-      <div class="photo" aria-hidden="true">YR</div>
-      <h1>Your Name</h1>
-      <div class="title">Software Engineer — Full Stack</div>
+      <div class="photo" aria-hidden="true">PP</div>
+      <h1>Prince Patel</h1>
+      <div class="title">IT Engineering Student (2025–2029)</div>
 
       <div class="contact">
-        <p><strong>Email:</strong> your.email@example.com</p>
-        <p><strong>Phone:</strong> +91 98765 43210</p>
-        <p><strong>Location:</strong> Mumbai, India</p>
-        <p><strong>Website:</strong> yoursite.example</p>
+        <p><strong>Email:</strong> princepatel03122007@gmail.com</p>
+        <p><strong>Phone:</strong> 9429355353</p>
+        <p><strong>Location:</strong> Vastral, Ahmedabad</p>
       </div>
 
       <div class="section-title">Skills</div>
       <div class="skill-list" aria-label="skills">
-        <div class="skill">JavaScript</div>
-        <div class="skill">Node.js</div>
-        <div class="skill">React</div>
-        <div class="skill">TypeScript</div>
-        <div class="skill">gRPC</div>
-        <div class="skill">Docker</div>
-        <div class="skill">Kubernetes</div>
+        <div class="skill">C</div>
+        <div class="skill">C++</div>
+        <div class="skill">Java</div>
       </div>
 
-      <div class="section-title">Languages</div>
+      <div class="section-title">Interests</div>
       <div style="margin-top:10px;color:var(--muted);font-size:13px">
-        English — Professional<br>
-        Hindi — Native
-      </div>
-
-      <div class="section-title">Education</div>
-      <div style="margin-top:8px;color:var(--muted);font-size:13px">
-        B.Tech in Computer Science<br>
-        Institute Name — 2018
+        Coding, Problem Solving, Software Development
       </div>
     </aside>
 
     <main class="main">
-      <div class="headline">
-        <div>
-          <h2>Senior Software Engineer</h2>
-          <div style="color:var(--muted);font-size:13px">Experienced in building scalable microservices, CI/CD, and modern web apps.</div>
-        </div>
-        <div class="print-hide">
-          <button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
-        </div>
-      </div>
-
-      <div class="summary">
-        Concise 2–3 line professional summary. Focus on achievements and impact: what you build, the scale (users/traffic), tech stack, and strengths.
-      </div>
-
-      <section class="experience">
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:18px">
-          <h3 style="margin:0">Experience</h3>
-          <div style="color:var(--muted);font-size:13px">Total: 4+ years</div>
-        </div>
-
-        <article class="job">
-          <h3>Senior Software Engineer — Acme Corp</h3>
-          <div class="meta">Jun 2023 — Present · Mumbai, India</div>
-          <p class="muted">Working on real-time systems and backend APIs serving millions of requests/month.</p>
-          <ul class="bullets">
-            <li>Designed and implemented microservices with Node.js and gRPC, reducing latency by 30%.</li>
-            <li>Led migration to Kubernetes and introduced Canary deployments using Argo Rollouts.</li>
-            <li>Built observability stack with Prometheus, Grafana and OpenTelemetry.</li>
-          </ul>
-        </article>
-
-        <article class="job">
-          <h3>Software Engineer — Beta Labs</h3>
-          <div class="meta">Jul 2020 — May 2023 · Remote</div>
-          <p>Worked on frontend and backend features for an analytics product.</p>
-          <ul class="bullets">
-            <li>Implemented a React component library and improved bundle size by 18%.</li>
-            <li>Wrote unit and integration tests, increasing coverage from 45% to 78%.</li>
-          </ul>
-        </article>
-
+      <section class="summary">
+        <h2>About Me</h2>
+        <p>I am Prince Patel, a first-year IT engineering student (2025–2029). I am passionate about coding and technology, and I have already learned C, C++, and Java. My goal is to grow as a skilled software engineer while exploring new technologies and building innovative projects.</p>
       </section>
 
       <section class="education">
-        <h3 style="margin-top:22px">Education</h3>
-        <div style="margin-top:8px">
-          <strong>Bachelor of Technology in Computer Science</strong>
-          <div class="meta">National Institute — 2014 — 2018</div>
-          <p style="color:var(--muted);margin-top:6px">Relevant coursework: Data Structures, OS, Distributed Systems, Databases.</p>
-        </div>
-      </section>
-
-      <section class="projects" style="margin-top:22px">
-        <h3>Projects</h3>
-        <div style="margin-top:8px">
-          <strong>Live Docs — Documentation platform</strong>
-          <div class="meta">React • Next.js • Docker • AWS</div>
-          <p style="margin-top:6px;color:var(--muted);">Short one-line description emphasizing impact, link to demo or repo.</p>
-        </div>
+        <h2>Education</h2>
+        <p><strong>Bachelor of Technology in Information Technology</strong></p>
+        <div class="meta">2025 – 2029</div>
+        <p style="color:var(--muted);margin-top:6px">Currently pursuing my degree in IT Engineering.</p>
       </section>
 
       <section style="margin-top:22px">
-        <h3>Certifications & Awards</h3>
-        <ul style="margin-top:8px;color:var(--muted);padding-left:18px">
-          <li>Certified Kubernetes Application Developer</li>
-          <li>Employee of the Year — Acme Corp (2024)</li>
-        </ul>
+        <h2>Projects</h2>
+        <p style="color:var(--muted);">(Add your future projects here once you complete them — such as coding assignments, personal apps, or open-source contributions.)</p>
       </section>
-
     </main>
   </div>
 
   <footer>
-    Tip: Edit the file and replace placeholder text. Use the Print button to save as PDF for job applications.
+    Resume Website — Prince Patel
   </footer>
-
 </body>
 </html>

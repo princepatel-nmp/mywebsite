@@ -6,32 +6,31 @@
   <title>Resume — Prince Patel</title>
   <style>
     :root{
-      --accent:#0b74de;
-      --muted:#6b7280;
-      --bg:#f7fafc;
-      --card:#ffffff;
+      --accent:#ff7f11;
+      --muted:#d1d5db;
+      --bg:#000000;
+      --card:#111111;
       --max-width:900px;
-      --gap:20px;
       font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     }
     *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:#111827;display:flex;align-items:center;justify-content:center;padding:32px}
-    .resume{width:100%;max-width:var(--max-width);background:var(--card);box-shadow:0 8px 30px rgba(12,15,20,0.08);border-radius:12px;overflow:hidden;display:grid;grid-template-columns:1fr 2fr}
+    body{margin:0;background:var(--bg);color:white;display:flex;align-items:center;justify-content:center;padding:32px}
+    .resume{width:100%;max-width:var(--max-width);background:var(--card);box-shadow:0 8px 30px rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;display:grid;grid-template-columns:1fr 2fr}
 
     /* Sidebar */
-    .sidebar{background:linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);padding:28px 22px;border-right:1px solid #eef2f7}
-    .photo{width:110px;height:110px;border-radius:12px;overflow:hidden;background:#e6eefb;margin:0 auto 14px;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)}
-    h1{font-size:20px;margin:8px 0 0;text-align:center}
+    .sidebar{background:#1a1a1a;padding:28px 22px;border-right:1px solid #2a2a2a}
+    .photo{width:110px;height:110px;border-radius:12px;overflow:hidden;background:#333;margin:0 auto 14px;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)}
+    h1{font-size:22px;margin:8px 0 0;text-align:center;color:var(--accent)}
     .title{font-size:13px;text-align:center;color:var(--muted);margin-top:6px}
     .contact{margin-top:18px;font-size:14px}
     .contact p{margin:8px 0;color:var(--muted);font-size:13px}
     .section-title{display:flex;align-items:center;gap:8px;margin-top:18px;font-weight:700;color:var(--accent);font-size:13px}
     .skill-list{margin-top:10px;display:flex;flex-wrap:wrap;gap:8px}
-    .skill{background:#f1f5f9;padding:6px 10px;border-radius:999px;font-size:12px;color:#0f172a}
+    .skill{background:#2d2d2d;padding:6px 10px;border-radius:999px;font-size:12px;color:white}
 
     /* Main content */
     .main{padding:28px}
-    .headline h2{margin:0;font-size:18px}
+    .main h2{color:var(--accent);margin:0 0 8px 0}
     .summary{margin-top:12px;color:var(--muted);line-height:1.45}
 
     .education{margin-top:14px}
@@ -41,14 +40,7 @@
     /* Responsive */
     @media (max-width:900px){
       .resume{grid-template-columns:1fr}
-      .sidebar{border-right:none;border-bottom:1px solid #eef2f7}
-    }
-
-    @media print{
-      body{background:white}
-      .resume{box-shadow:none;border-radius:0;max-width:100%}
-      .print-hide{display:none}
-      .resume{grid-template-columns:1fr 2fr}
+      .sidebar{border-right:none;border-bottom:1px solid #2a2a2a}
     }
   </style>
 </head>
